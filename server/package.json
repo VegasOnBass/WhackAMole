@@ -16,6 +16,9 @@
     "node": "16.16.0"
   },
   "scripts": {
+    "install-client": "cd ../client && yarn add",
+    "build": "cd ../client && yarn build",
+    "heroku-postbuild": "yarn run install-client && yarn run build",
     "start": "node server.js",
     "start-watch": "nodemon server.js",
     "dev": "concurrently \"yarn run start-watch\" \"cd ../client && yarn start\""
