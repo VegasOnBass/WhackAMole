@@ -7,10 +7,6 @@ router.get('/scores', async (req, res, next) => {
                             .sort('-score')                            
     
   res.send(scores)
-
-  /* Score.find({})
-    .then((data) => res.json(data))
-    .catch(next); */
 });
 
 router.post('/scores', (req, res, next) => {
