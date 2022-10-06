@@ -17,13 +17,13 @@ html {
 body {
   padding: 0;
   margin: 2rem;
-  font-family: 'Amatic SC', cursive;
 }
 
 h1 {
   color: #a82719e7;
   text-shadow: 2px 2px 0 #ebc51ee7;
   text-align: center;
+  font-family: 'Amatic SC', cursive;
   font-size: 10rem;
   line-height: 1;
   margin: 2rem 0rem;
@@ -58,6 +58,7 @@ button {
 
 .counter {
   font-size: 3rem;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.2);
   padding: 1rem 2rem;
   margin: 2rem;
@@ -181,18 +182,10 @@ button {
 
 
 
-
-
-@media only screen and (max-width) {
-  h1 {
-    font-size: 5rem
-  }
-}
-
 @media only screen and (max-width: 600px) {
 
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   button {
@@ -213,7 +206,7 @@ button {
   }
 
   .counter {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
 
