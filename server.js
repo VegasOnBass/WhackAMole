@@ -17,7 +17,7 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
-app.use('', routes);
+app.use('/api/scores', routes);
 
 app.use((err, req, res, next) => {
   console.log(err);
