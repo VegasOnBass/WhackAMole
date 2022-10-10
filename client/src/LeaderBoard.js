@@ -4,7 +4,7 @@ import { resetScore } from './redux/score.js';
 
 import { nanoid } from "nanoid";
 
-function Leaderboard() {
+function LeaderBoard() {
     const [scores, setScores] = useState([])
     const [name, setName] = useState('')
 
@@ -103,4 +103,4 @@ function Leaderboard() {
     )
 }
 
-export default Leaderboard
+export default LeaderBoard

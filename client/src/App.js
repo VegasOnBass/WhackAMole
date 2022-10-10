@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toggleScores } from './redux/showScores.js';
 
 import Game from './Game'
-import Leaderboard from './Leaderboard';
+import Leaderboard from './LeaderBoard';
 import './App.css';
 
 
