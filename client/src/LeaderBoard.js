@@ -81,9 +81,9 @@ function LeaderBoard() {
                         return (
                             <li className="row" key={score.id}>
                                 <div className="leader left">{i++}</div>
-                                <form className="leader middle">
+                                <form className="leader middle" onSubmit={submitScore}>
                                     <input type="text" onChange={handleChange} />
-                                    <button type="submit" onClick={submitScore}>Submit</button>
+                                    <button type="submit">Submit</button>
                                 </form>
                                 <span className="leader right">{score.score}</span>
                             </li>
