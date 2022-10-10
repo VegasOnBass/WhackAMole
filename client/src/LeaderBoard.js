@@ -4,7 +4,7 @@ import { resetScore } from './redux/score.js';
 
 import { nanoid } from "nanoid";
 
-function LeaderBoard() {
+function Leaderboard() {
     const [scores, setScores] = useState([])
     const [name, setName] = useState('')
 
@@ -27,7 +27,8 @@ function LeaderBoard() {
 
             const records = await response.json();
             setScores(records);
-            setScores([...records, { name: name, score: score }])
+            setScores([...records, { id:'player', score: score }])
+            
         }
 
         getScores()
@@ -35,7 +36,11 @@ function LeaderBoard() {
 
     scoresOrdered = [...scores].sort((a, b) => b.score - a.score)
 
-
+    const handleChange = (text) => {
+        setName(text.target.value)
+        console.log(name)
+    }
+    
     // Function to ssubmit scores
     async function submitScore(e) {
         e.preventDefault();
@@ -62,23 +67,19 @@ function LeaderBoard() {
 
     }
 
-    const handleChange = (text) => {
-        setName(text.target.value)
-        console.log(name)
-    }
 
     return (
         <div>
-            <h1>LeaderBoard</h1>
+            <h1>Leaderboard</h1>
             <br />
             <br />
             <div className="board">
                 {scoresOrdered.slice(0, 10).map((score) => {
                     const key = nanoid()
 
-                    if (score.name === '') {
+                    if (score.id === 'player') {
                         return (
-                            <li className="row" key={key}>
+                            <li className="row" key={score.id}>
                                 <div className="leader left">{i++}</div>
                                 <form className="leader middle">
                                     <input type="text" onChange={handleChange} />
@@ -102,4 +103,4 @@ function LeaderBoard() {
     )
 }
 
-export default LeaderBoard
+export default Leaderboard

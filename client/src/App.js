@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toggleScores } from './redux/showScores.js';
 
 import Game from './Game'
-import LeaderBoard from './LeaderBoard';
+import Leaderboard from './Leaderboard';
 import './App.css';
 
 
@@ -21,10 +21,10 @@ function App() {
       <div className="container row center">
         <p className="counter">High Score: {highScore} </p>
         {showScores ? <button onClick={() => dispatch(toggleScores(false))}>Back to game</button> :
-          <button onClick={() => dispatch(toggleScores(true))}>LeaderBoard</button>
+          <button onClick={() => dispatch(toggleScores(true))}>Leaderboard</button>
         }
       </div>
-      {showScores ? <LeaderBoard /> : <Game />}
+      {showScores ? <Leaderboard /> : <Game />}
     </div>
   );
 }
