@@ -35,7 +35,7 @@ h1 {
   margin: auto;
 }
 
-button {
+button, .button {
   color: #ebc51ee7;
   background-color: #a82719e7;
   font-weight: bold;

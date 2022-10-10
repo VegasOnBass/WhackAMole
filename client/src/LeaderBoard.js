@@ -42,8 +42,8 @@ function LeaderBoard() {
     }
     
     // Function to ssubmit scores
-    async function submitScore(e) {
-        e.preventDefault();
+    async function submitScore(event) {
+        event.preventDefault();
 
         const highScore = { name: name, score: score }
 
@@ -83,7 +83,7 @@ function LeaderBoard() {
                                 <div className="leader left">{i++}</div>
                                 <form className="leader middle" onSubmit={submitScore}>
                                     <input type="text" onChange={handleChange} />
-                                    <button type="submit">Submit</button>
+                                    <input className="button" type="submit" value="Submit" />
                                 </form>
                                 <span className="leader right">{score.score}</span>
                             </li>
