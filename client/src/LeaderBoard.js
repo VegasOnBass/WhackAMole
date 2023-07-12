@@ -17,7 +17,7 @@ function LeaderBoard() {
     useEffect(() => {
         // Function to get scores
         async function getScores() {
-            const response = await fetch(`https://whack-a-mole-app.herokuapp.com/scores`);
+            const response = await fetch(`http://localhost:5000/scores`);
 
             if (!response.ok) {
                 const message = `An error occurred: ${response.statusText}`;
@@ -47,7 +47,7 @@ function LeaderBoard() {
 
         const highScore = { name: name, score: score }
 
-        const response = await fetch(`https://whack-a-mole-app.herokuapp.com/scores`, {
+        const response = await fetch(`http://localhost:5000/scores`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
