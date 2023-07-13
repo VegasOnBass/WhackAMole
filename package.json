@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "cd client && yarn build",
-    "install-client": "cd client && yarn",
+    "install-client": "yarn && yarn build",
     "heroku-postbuild": "yarn run install-client && yarn run build",
     "start": "node server.js",
     "start-watch": "nodemon server.js",
